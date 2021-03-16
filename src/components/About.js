@@ -49,7 +49,7 @@ const About = () => {
               </h1>
               <div className='prose lg:prose-xl text-white'>
                 <BlockContent
-                  block={author.bio}
+                  blocks={author.bio}
                   projectId='sv8acbkn'
                   dataset='production'
                 />
