@@ -1,9 +1,15 @@
 import React from 'react';
 import image from '../backgroundPic.jpg';
+import { Helmet } from 'react-helmet';
+
+const TITLE = 'Home';
 
 const Home = () => {
   return (
     <main>
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
       <img
         src={image}
         alt='Homepage Background'

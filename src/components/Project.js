@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import sanityClient from '../client';
+import { Helmet } from 'react-helmet';
+import image from '../backgroundPic.jpg';
+
+const TITLE = 'Projects';
 
 const Project = () => {
   const [projectData, setProjectData] = useState(null);
@@ -21,9 +25,16 @@ const Project = () => {
       .catch(console.error);
   }, []);
   return (
-    <main className='bg-green-100 min-h-screen p-12'>
+    // <main className='bg-green-100 min-h-screen p-12'>
+    <main className='relative'>
+      <Helmet>
+        <title>{TITLE}</title>
+      </Helmet>
+      <img src={image} alt='Background Image' className='absolute w-full'></img>
       <section className='container mx-auto'>
-        <h1 className='text-5xl flex justify-center cursive'>My Projects</h1>
+        <h1 className='text-5xl flex justify-center cursive mb-6'>
+          My Projects
+        </h1>
         {/* <h2 className='text-lg text-gray-600 flex justify-center mb-12'>
           Welcome!
         </h2> */}
@@ -64,9 +75,9 @@ const Project = () => {
                     className='text-red-500 font-bold hover:underline hover:text-red-400 text-xl'
                   >
                     See Project{' '}
-                    <span role='img' aria-label='right pointer'>
+                    {/* <span role='img' aria-label='right pointer'>
                       👉
-                    </span>
+                    </span> */}
                   </a>
                 </div>
               </article>

@@ -3,6 +3,9 @@ import sanityClient from '../client';
 import image from '../backgroundPic.jpg';
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
+import { Helmet } from 'react-helmet';
+
+const TITLE = 'About Me';
 
 const builder = imageUrlBuilder(sanityClient);
 
@@ -31,6 +34,9 @@ const About = () => {
   } else {
     return (
       <main className='relative'>
+        <Helmet>
+          <title>{TITLE}</title>
+        </Helmet>
         <img
           src={image}
           alt='Background Image'
