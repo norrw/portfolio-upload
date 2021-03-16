@@ -46,14 +46,14 @@ const Project = () => {
                     <strong className='font-bold'>Date Completed:</strong>{' '}
                     {new Date(project.date).toLocaleDateString()}
                   </span>
-                  <span>
+                  {/* <span>
                     <strong className='font-bold'>Company:</strong>
                   </span>{' '}
-                  {project.place}
-                  <span>
+                  {project.place} */}
+                  {/* <span>
                     <strong className='font-bold'>Type:</strong>{' '}
                     {project.projectType}
-                  </span>
+                  </span> */}
                   <p className='my-6 text-lg text-gray-700 leading-relaxed'>
                     {project.description}
                   </p>
